@@ -13,7 +13,7 @@ sudo debconf-set-selections <<< "mysql-server mysql-server/root_password passwor
 sudo debconf-set-selections <<< "mysql-server mysql-server/root_password_again password ${MYSQLPASS}"
 sudo apt-get -y install mysql-server mysql-client
 
-apt-get install -y php5-mysql php5-fpm php5-gd php5-cli
+apt-get install -y php5-mysql php5-fpm php5-gd php5-cli php5-curl zip unzip
 
 #configure phpfpm settings
 sed -i "s/^;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/" /etc/php5/fpm/php.ini
